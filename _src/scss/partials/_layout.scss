@@ -1,0 +1,83 @@
+.ct {
+  width: 100%;
+  // margin-bottom: $line-height-unitless * 4rem;
+  padding-bottom: $line-height-unitless * 2rem;
+  padding-top: $line-height-unitless * 2rem;
+}
+
+.ct:nth-of-type(2n) {
+  @include background(#f2f2f2);
+}
+
+.ct-blue {
+  @include background($primary-color);
+}
+
+.ct-section {
+  padding-top: $line-height-unitless * 4rem;
+}
+
+.wrapper {
+  width: 90%;
+  @include outer-container();
+}
+
+.wrapper-invert {
+  color: $primary-color-invert;
+  a {
+    color: $link-color-invert;
+  }
+}
+
+.brand-section {
+  position: relative;
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: $line-height-unitless * 2rem;
+}
+
+.entry-wrap {
+  @include span-columns(12);
+  margin-bottom: $gutter;
+}
+
+.entry-wrap-accent {
+  background-color: #f2f2f2;
+  padding: $gutter;
+}
+
+.col {
+  margin-bottom: $gutter;
+}
+
+.col-6 {
+  @include span-columns(12 of 12);
+  @include omega(2n);
+  @include media($small) {
+    @include span-columns(6 of 12);
+  }
+}
+
+.col-4 {
+  @include span-columns(12 of 12);
+  @include omega(3n);
+  @include media($small) {
+    @include span-columns(4 of 12);
+  }
+}
+
+.col-2 {
+  @include span-columns(6 of 12);
+  @include omega();
+
+  @include media($small) {
+    @include span-columns(2 of 12);
+    @include omega(6n);
+  }
+}
+
+article {
+  margin-bottom: $line-height-2x;
+}
