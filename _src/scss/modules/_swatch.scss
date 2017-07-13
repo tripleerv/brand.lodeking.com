@@ -1,13 +1,45 @@
 .swatch {
   width: 100%;
-  height: 100px;
+  height: 10rem;
   display: block;
   position: relative;
+
+  @include span-columns(6 of 12);
+  @include omega();
+
+  @include media($small) {
+    @include span-columns(2 of 8);
+    @include omega(4n);
+  }
+
+  @include media($medium) {
+    @include span-columns(2 of 12);
+    @include omega(6n);
+  }
+
 }
 
-.sw-blue { background-color: #1a3d5d; }
-.sw-black { background-color: #252525; }
-.sw-grey { background-color: #5b5b5b; }
-.sw-white { background-color: #e5e5e5; }
+.sw-blue { background-color: $blue; }
+.sw-black { background-color: $black; }
+.sw-grey { background-color: $grey; }
+.sw-white { background-color: $white; border: 1px solid $light-grey;}
+.sw-light-grey { background-color: $light-grey;}
+.sw-subdued-grey { background-color: $subdued-grey; border: 1px solid $light-grey;}
 .sw-acc-blue { background-color: #4194d0; }
-.sw-acc-gold { background-color: #b58d5e; }
+.sw-acc-gold { background-color: $gold; }
+.sw-dark-grey { background-color: $dark-grey; }
+
+.swatch__footer {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+  color: $white;
+  width: 100%;
+  padding: 1rem;
+  font-size: #{0.875 * $base-font-size};
+
+  &--light {
+    color: $body-text-color;
+  }
+
+}

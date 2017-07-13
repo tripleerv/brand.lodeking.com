@@ -1,21 +1,29 @@
 $base-font-size: 1rem;
 $line-height-unitless: 1.45;
-$line-height: #{($base-font-size*$line-height-unitless)};
-$line-height-2x: #{($base-font-size*$line-height-unitless)*2};
+$line-height: #{($base-font-size * $line-height-unitless)};
+$line-height-2x: #{($base-font-size * $line-height-unitless) * 2};
 
-$primary-color: #1a3d5d;
+$blue: #193d5c;
+$gold: #b58d5e;
+
+// $primary-color: #1a3d5d;
+$primary-color: $blue;
 $primary-color-invert: #fafafa;
-$secondary-color: #c00;
+$secondary-color: $gold;
 
-$subdued-grey: #fafafa;
-$light-grey: #cedbe2;
-$grey: #95a7b1;
-$dark-grey: #7290a0;
+$subdued-grey: #f9fafa;
+$light-grey: #e6e8e7;
+$light-grey: #e5e5e5;
+$grey: #5b5b5b;
+$dark-grey: #5b5c5c;
 $white: #fff;
-$black: #222;
+// $black: #222;
+$black: #404041;
+$black: #252525;
+//$black: #262626;
 
-$body-text-color: $black;
-$heading-text-color: #111;
+$body-text-color: $blue;
+$heading-text-color: $black;
 
 $link-color: $primary-color;
 $link-color-invert: $primary-color-invert;
@@ -25,9 +33,10 @@ $link-color-invert: $primary-color-invert;
 
 // Fonts
 // A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack
-$sans: 'proxima nova', -apple-system, BlinkMacSystemFont, "Roboto", Helmet, Freesans, sans-serif;
-$knockout-heavy: 'Knockout 50 A', 'Knockout 50 B';
-$knockout-medium: 'Knockout 48 A', 'Knockout 48 B';
+$sans: Calibre, -apple-system, BlinkMacSystemFont, "Roboto", Helmet, Freesans, sans-serif;
+$knockout-heavy: 'Knockout 50 A', 'Knockout 50 B', 'Knockout', $sans;
+$knockout-medium: 'Knockout 48 A', 'Knockout 48 B' 'Knockout', $sans;
+$rajdhani: 'Rajdhani', $knockout-heavy, $sans;
 
 $serif: Georgia, serif;
 
@@ -43,3 +52,5 @@ $max-width: em(800);
 
 // Breakpoints
 $small: new-breakpoint(min-width 500px 4);
+
+$medium: new-breakpoint(min-width 768px 12);

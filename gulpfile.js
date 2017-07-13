@@ -40,7 +40,7 @@ gulp.task('sass', function () {
       .pipe(gulp.dest('./dist/css')) // specify the destination for the minified css created by sass
       .pipe(gulp.dest('./_site/dist/css')) // also output to the _site directory for live injecting
       .pipe(browserSync.reload({stream:true}))
-      .pipe(notify({ message: 'Compiled Sass.' }));
+      .pipe(notify({ message: 'Compiled Sass!' }));
 });
 
 gulp.task('js', function() {

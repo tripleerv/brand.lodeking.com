@@ -3,7 +3,7 @@ body {
   font-family: $sans;
   line-height: 1.45;
   color: $body-text-color;
-  background-color: #fafafa;
+  background-color: $subdued-grey;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -12,24 +12,56 @@ p {
   margin-bottom: $line-height;
 }
 
-h1 {
-  font-size: #{2.4*$base-font-size};
+h1,
+.h1 {
+  // font-size: #{2.4 * $base-font-size};
+  font-size: #{3.8 * $base-font-size};
+  line-height: 1;
+  font-family: $rajdhani;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: $line-height;
 }
 
-h2 {
-  font-size: #{2.2*$base-font-size};
+h2,
+.h2 {
+  // font-size: #{2.2 * $base-font-size};
+  font-size: #{2 * $base-font-size};
+  font-family: $rajdhani;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-h3 {
-  font-size: #{1.8*$base-font-size};
+h3,
+.h3 {
+  // font-size: #{1.8 * $base-font-size};
+  font-size: #{1.4 * $base-font-size};
+  font-family: 'Knockout 49 Liteweight', $knockout-heavy;
+  text-transform: uppercase;
 }
 
-b {
+h4,
+.h4 {
+  // font-size: #{1.8 * $base-font-size};
+  font-size: #{1.2 * $base-font-size};
+}
+
+h5,
+.h5 {
+  font-size: #{0.8 * $base-font-size};
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+b,
+strong {
   font-weight: 600;
 }
 
-article h1 {
-  margin-bottom: $line-height;
+article {
+  h1 {
+    margin-bottom: $line-height;
+  }
 }
 
 ul,
@@ -66,8 +98,13 @@ pre {
   word-wrap: break-word;
 }
 
-h1 a:hover, h2 a:hover {
-  text-decoration: none;
+h1,
+h2 {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .knockout-medium {
@@ -99,6 +136,7 @@ h1 a:hover, h2 a:hover {
 
 .description {
   color: $grey;
+  color: $light-grey;
   font-style: italic;
 }
 
@@ -130,4 +168,26 @@ h1 a:hover, h2 a:hover {
 .download-link {
   color: $grey;
   font-size: $base-font-size / 1.25;
+}
+
+.a-rajdhani {
+  font-family: $rajdhani;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.a-united {
+  // font-family: $product-line-name-font;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.a-camelcase {
+  text-transform: none;
+}
+
+.section-nav {
+  font-family: $rajdhani;
+  text-transform: uppercase;
+  font-weight: 600;
 }

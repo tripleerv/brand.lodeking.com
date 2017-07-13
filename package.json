@@ -1,8 +1,8 @@
 {
   "name": "brand.lodeking.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Brand guidelines for Lode-King.",
-  "author": "@collectifco",
+  "author": "Lode King Marketing Team",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.4.0",

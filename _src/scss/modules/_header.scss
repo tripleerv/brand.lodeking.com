@@ -3,3 +3,38 @@
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
+
+.section-nav {
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  background-color: $subdued-grey;
+
+  &__item {
+    padding: $line-height;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    border-left: 1px solid $light-grey;
+    &:last-of-type {
+      border-right: 1px solid $light-grey;
+    }
+    &:hover {
+      background: $white;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+.site-title-crown {
+  height: 0.75rem;
+  margin-bottom: $line-height;
+}

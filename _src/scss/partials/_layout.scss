@@ -3,14 +3,23 @@
   // margin-bottom: $line-height-unitless * 4rem;
   padding-bottom: $line-height-unitless * 2rem;
   padding-top: $line-height-unitless * 2rem;
-}
 
-.ct:nth-of-type(2n) {
-  @include background(#f2f2f2);
-}
+  &:nth-of-type(2n) {
+    @include background($subdued-grey);
+  }
 
-.ct-blue {
-  @include background($primary-color);
+  &-blue {
+    @include background($primary-color);
+  }
+
+  &-gold {
+    @include background($gold);
+  }
+
+  &-black {
+    @include background($black);
+  }
+
 }
 
 .ct-section {
@@ -44,7 +53,8 @@
 }
 
 .entry-wrap-accent {
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
+  background-color: $subdued-grey;
   padding: $gutter;
 }
 
@@ -78,6 +88,21 @@
   }
 }
 
+.col-3 {
+  @include span-columns(6 of 12);
+  @include omega();
+
+  @include media($small) {
+    @include span-columns(3 of 12);
+    @include omega(6n);
+  }
+}
+
 article {
   margin-bottom: $line-height-2x;
+}
+
+.a-flexbox {
+  display: flex;
+  flex-wrap: wrap;
 }

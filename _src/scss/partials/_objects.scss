@@ -7,7 +7,7 @@
 }
 
 textarea {
-  padding: #{($line-height-unitless/2)}rem;
+  padding: #{($line-height-unitless / 2)}rem;
 }
 
 #{$all-buttons},
@@ -19,10 +19,30 @@ textarea {
   border: 1px solid $link-color;
   border-radius: 0.125rem;
   cursor: pointer;
+
   &:hover {
     background-color: tint($link-color, 10%);
   }
+
   &:active {
     background-color: shade($link-color, 5%);
+  }
+}
+
+hr {
+  border: 0 none;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: $line-height;
+}
+
+.box {
+  border: 1px solid $light-grey;
+  padding: $line-height;
+  border-radius: 0.25rem;
+
+  .download-link {
+    border-top: 1px solid $light-grey;
+    padding-top: $line-height;
+    display: block;
   }
 }
