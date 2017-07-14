@@ -1,30 +1,32 @@
+<header class="site-header">
+  <div class="wrapper">
+    <a href="/">
+      <img src="/dist/img/logo/lode-king-crown-black.svg" class="site-header__logo">
+    </a>
+    <nav class="site-nav">
+      <a href="/assets/">Brand Assets</a>
+      <a href="/guide/">Brand Guide</a>
+      <a href="https://www.lodeking.com">lodeking.com</a>
+    </nav>
+  </div>
+</header>
+
 <div class="ct ct-blue [ct-black] wrapper-invert">
 
   <div class="wrapper">
-    <header class="site-header" role="banner">
+    <header class="page-header" role="banner" data-bg="https://www.lodeking.com/wp-content/themes/lodeking-wp/img/company/about/top-bg.jpg">
       <!-- <h1 class="site-name"><a href="/" rel="home">{{site.title}}</a></h1> -->
-      <a href="/" rel="home"><img src="/dist/img/logo/lode-king-crown-white.svg" alt="{{site.title}}" class="site-title-crown"></a>
-      <h1 class="site-name huge"><a href="{{page.url}}">{{page.title}}</a></h1>
+      <!-- <a href="/" rel="home"><img src="/dist/img/logo/lode-king-crown-white.svg" alt="{{site.title}}" class="site-title-crown"></a> -->
+      <h1 class="site-name huge"><a href="{{page.url}}">—<br>{{page.title}}</a></h1>
       <div class="description">{{site.description}}</div>
       <br>
-      <div class="description">Updated 13 July, 2017.</div>
-      <div><a href="https://www.lodeking.com">Back to lodeking.com</a></div>
+      <div class="description">Updated {{ site.time | date: '%d %B %Y' }}.</div>
       <nav class="site-nav" role="navigation">
         <div class="menu">
-        {% assign section = page.url | remove_first:'/' | split:'/' | first %}
+          {% assign section = page.url | remove_first:'/' | split:'/' | first %}
         </div>
       </nav>
     </header>
   </div>
 
 </div>
-<div class="sticky-anchor"> </div>
-<nav class="section-nav sticky-content">
-  <div class="wrapper">
-    <a href="/#logos" class="section-nav__item">Logos</a>
-    <a href="/#colours" class="section-nav__item">Colours</a>
-    <a href="/#products" class="section-nav__item">Product Names</a>
-    <!-- <a href="/#typography" class="section-nav__item">Typography</a> -->
-    <a href="/#products" class="section-nav__item">Naming</a>
-  </div>
-</nav>

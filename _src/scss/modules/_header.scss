@@ -1,4 +1,40 @@
 .site-header {
+  color: $black;
+  padding: $line-height 0;
+  background: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+
+  &__logo {
+    height: 1.25rem;
+  }
+
+  @media screen and (max-width: 460px) {
+    text-align: center;
+  }
+
+}
+
+.site-nav {
+  font-family: $rajdhani;
+  text-transform: uppercase;
+  font-weight: 600;
+  float: right;
+
+  a {
+    color: inherit;
+    margin-right: $line-height;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    margin-top: $line-height;
+  }
+
+}
+
+.page-header {
   margin-bottom: 2rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -19,10 +55,19 @@
     border-left: 1px solid $light-grey;
     &:last-of-type {
       border-right: 1px solid $light-grey;
+      @media screen and (max-width: 460px) {
+        border: 0 none;
+      }
     }
     &:hover {
       background: $white;
     }
+
+    @media screen and (max-width: 460px) {
+      border: 0 none;
+      padding: #{0.5 * $line-height};
+    }
+
   }
 
   &.fixed {
