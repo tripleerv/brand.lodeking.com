@@ -4,8 +4,9 @@
       <img src="/dist/img/logo/lode-king-crown-black.svg" class="site-header__logo">
     </a>
     <nav class="site-nav">
-      <a href="/assets/">Brand Assets</a>
-      <a href="/guide/">Brand Guide</a>
+      {% assign current = page.url | downcase | split: '/' %}
+      <a href="/assets/" {% if current[1] == 'assets' %}class='is-current'{% endif %}>Brand Assets</a>
+      <a href="/guide/" {% if current[1] == 'guide' %}class='is-current'{% endif %}>Brand Guide</a>
       <a href="https://www.lodeking.com">lodeking.com</a>
     </nav>
   </div>
@@ -21,11 +22,11 @@
       <div class="description">{{site.description}}</div>
       <br>
       <div class="description">Updated {{ site.time | date: '%d %B %Y' }}.</div>
-      <nav class="site-nav" role="navigation">
+      <!-- <nav class="site-nav" role="navigation">
         <div class="menu">
           {% assign section = page.url | remove_first:'/' | split:'/' | first %}
         </div>
-      </nav>
+      </nav> -->
     </header>
   </div>
 
